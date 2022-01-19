@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:skanner_frontend/functions/convertir.dart';
+import 'package:skanner_frontend/functions/editar.dart';
+import 'package:skanner_frontend/functions/unir.dart';
+import 'functions/escanear.dart';
+import 'functions/traducir.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -17,7 +22,10 @@ class DashboardPage extends StatelessWidget {
               clipBehavior: Clip.antiAliasWithSaveLayer,
               child: InkWell(
                 splashColor: Colors.black26,
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Traducir()));
+                },
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -30,7 +38,7 @@ class DashboardPage extends StatelessWidget {
                       fit: BoxFit.cover,
                       child: Center(
                         child: Text(
-                          "Traducir",
+                          "Traducirr",
                           style: TextStyle(
                             fontSize: 22.0,
                             color: Colors.white,
@@ -49,7 +57,10 @@ class DashboardPage extends StatelessWidget {
               clipBehavior: Clip.antiAliasWithSaveLayer,
               child: InkWell(
                 splashColor: Colors.black26,
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Escanear()));
+                },
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -81,7 +92,10 @@ class DashboardPage extends StatelessWidget {
               clipBehavior: Clip.antiAliasWithSaveLayer,
               child: InkWell(
                 splashColor: Colors.black26,
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Union()));
+                },
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -114,7 +128,10 @@ class DashboardPage extends StatelessWidget {
               clipBehavior: Clip.antiAliasWithSaveLayer,
               child: InkWell(
                 splashColor: Colors.black26,
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Convertir()));
+                },
                 child: Column(
                   children: [
                     Ink.image(
@@ -145,7 +162,10 @@ class DashboardPage extends StatelessWidget {
               clipBehavior: Clip.antiAliasWithSaveLayer,
               child: InkWell(
                 splashColor: Colors.black26,
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Editar()));
+                },
                 child: Column(
                   children: [
                     Ink.image(
