@@ -2,14 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:skanner_frontend/functions/convertir.dart';
 import 'package:skanner_frontend/functions/editar.dart';
 import 'package:skanner_frontend/functions/unir.dart';
-import 'functions/escanear.dart';
-import 'functions/traducir.dart';
+import '../../functions/escanear.dart';
+import '../../functions/traducir.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    const elevation = 8.0;
+    final borderRadius = BorderRadius.circular(8.0);
+    const clipBehavior = Clip.antiAliasWithSaveLayer;
+    final splashColor = Colors.black26;
+    const size = MainAxisSize.min;
+    const style = TextStyle(fontSize: 22.0, color: Colors.white);
+    const double h = 200;
+    const double w = 400;
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
@@ -17,33 +26,27 @@ class DashboardPage extends StatelessWidget {
           children: [
             SizedBox(height: 30),
             Material(
-              elevation: 8.0,
-              borderRadius: BorderRadius.circular(8.0),
-              clipBehavior: Clip.antiAliasWithSaveLayer,
+              elevation: elevation,
+              borderRadius: borderRadius,
+              clipBehavior: clipBehavior,
               child: InkWell(
-                splashColor: Colors.black26,
+                splashColor: splashColor,
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Traducir()));
                 },
                 child: Column(
-                  mainAxisSize: MainAxisSize.min,
+                  mainAxisSize: size,
                   children: [
                     Ink.image(
                       image: NetworkImage(
                         "https://cdn.pixabay.com/photo/2018/12/10/10/21/earth-3866609_960_720.jpg",
                       ),
-                      height: 200,
-                      width: 400,
+                      height: h,
+                      width: w,
                       fit: BoxFit.cover,
                       child: Center(
-                        child: Text(
-                          "Traducirr",
-                          style: TextStyle(
-                            fontSize: 22.0,
-                            color: Colors.white,
-                          ),
-                        ),
+                        child: Text("Traducir", style: style),
                       ),
                     ),
                   ],
@@ -52,33 +55,27 @@ class DashboardPage extends StatelessWidget {
             ),
             SizedBox(height: 30),
             Material(
-              elevation: 8.0,
-              borderRadius: BorderRadius.circular(8.0),
-              clipBehavior: Clip.antiAliasWithSaveLayer,
+              elevation: elevation,
+              borderRadius: borderRadius,
+              clipBehavior: clipBehavior,
               child: InkWell(
-                splashColor: Colors.black26,
+                splashColor: splashColor,
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Escanear()));
                 },
                 child: Column(
-                  mainAxisSize: MainAxisSize.min,
+                  mainAxisSize: size,
                   children: [
                     Ink.image(
                       image: NetworkImage(
                         "https://cdn.pixabay.com/photo/2017/09/28/21/56/print-2797178_960_720.jpg",
                       ),
-                      height: 200,
-                      width: 400,
+                      height: h,
+                      width: w,
                       fit: BoxFit.cover,
                       child: Center(
-                        child: Text(
-                          "Escanear",
-                          style: TextStyle(
-                            fontSize: 22.0,
-                            color: Colors.white,
-                          ),
-                        ),
+                        child: Text("Escanear", style: style),
                       ),
                     ),
                   ],
@@ -87,34 +84,27 @@ class DashboardPage extends StatelessWidget {
             ),
             SizedBox(height: 30),
             Material(
-              elevation: 8.0,
-              borderRadius: BorderRadius.circular(8.0),
-              clipBehavior: Clip.antiAliasWithSaveLayer,
+              elevation: elevation,
+              borderRadius: borderRadius,
+              clipBehavior: clipBehavior,
               child: InkWell(
-                splashColor: Colors.black26,
+                splashColor: splashColor,
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Union()));
                 },
                 child: Column(
-                  mainAxisSize: MainAxisSize.min,
+                  mainAxisSize: size,
                   children: [
                     Ink.image(
                       image: NetworkImage(
                         "https://cdn.pixabay.com/photo/2016/10/07/12/35/puzzle-1721464_960_720.jpg",
                       ),
-                      height: 200,
-                      width: 400,
+                      height: h,
+                      width: w,
                       fit: BoxFit.cover,
                       child: Center(
-                        child: Text(
-                          "Unir",
-                          style: TextStyle(
-                            fontSize: 22.0,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
+                        child: Text("Unir", style: style),
                       ),
                     ),
                   ],
@@ -123,11 +113,11 @@ class DashboardPage extends StatelessWidget {
             ),
             SizedBox(height: 30),
             Material(
-              elevation: 8.0,
-              borderRadius: BorderRadius.circular(8.0),
-              clipBehavior: Clip.antiAliasWithSaveLayer,
+              elevation: elevation,
+              borderRadius: borderRadius,
+              clipBehavior: clipBehavior,
               child: InkWell(
-                splashColor: Colors.black26,
+                splashColor: splashColor,
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Convertir()));
@@ -138,17 +128,11 @@ class DashboardPage extends StatelessWidget {
                       image: NetworkImage(
                         "https://cdn.pixabay.com/photo/2018/11/15/09/15/documents-3816835_960_720.jpg",
                       ),
-                      height: 200,
-                      width: 400,
+                      height: h,
+                      width: w,
                       fit: BoxFit.cover,
                       child: Center(
-                        child: Text(
-                          "Convertir",
-                          style: TextStyle(
-                              fontSize: 22.0,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                        ),
+                        child: Text("Convertir", style: style),
                       ),
                     ),
                   ],
@@ -157,11 +141,11 @@ class DashboardPage extends StatelessWidget {
             ),
             SizedBox(height: 30),
             Material(
-              elevation: 8.0,
-              borderRadius: BorderRadius.circular(8.0),
-              clipBehavior: Clip.antiAliasWithSaveLayer,
+              elevation: elevation,
+              borderRadius: borderRadius,
+              clipBehavior: clipBehavior,
               child: InkWell(
-                splashColor: Colors.black26,
+                splashColor: splashColor,
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Editar()));
@@ -172,18 +156,10 @@ class DashboardPage extends StatelessWidget {
                       image: NetworkImage(
                         "https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537_960_720.jpg",
                       ),
-                      height: 200,
-                      width: 400,
+                      height: h,
+                      width: w,
                       fit: BoxFit.cover,
-                      child: Center(
-                        child: Text(
-                          "Editar",
-                          style: TextStyle(
-                              fontSize: 22.0,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
+                      child: Center(child: Text("Editar", style: style)),
                     ),
                   ],
                 ),

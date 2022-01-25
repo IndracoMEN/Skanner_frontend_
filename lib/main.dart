@@ -1,27 +1,28 @@
-import 'package:skanner_frontend/contacts.dart';
-import 'package:skanner_frontend/dashboard.dart';
-import 'package:skanner_frontend/events.dart';
-import 'package:skanner_frontend/notes.dart';
-import 'package:skanner_frontend/notifications.dart';
-import 'package:skanner_frontend/privacy_policy.dart';
-import 'package:skanner_frontend/send_feedback.dart';
-import 'package:skanner_frontend/settings.dart';
-import 'package:fancy_bar/fancy_bar.dart';
+import 'package:skanner_frontend/Widgets/Dashboard/dashboard.dart';
+
 import 'package:flutter/material.dart';
+import 'package:skanner_frontend/Widgets/Fancy_Bottom/fancy.dart';
 
-import 'my_drawer_header.dart';
+import 'Widgets/Drawer/my_drawer_header.dart';
 
-void main() => runApp(MyApp());
+import 'package:skanner_frontend/Widgets/Drawer/events.dart';
+import 'package:skanner_frontend/Widgets/Drawer/notes.dart';
+import 'package:skanner_frontend/Widgets/Drawer/notifications.dart';
+import 'package:skanner_frontend/Widgets/Drawer/privacy_policy.dart';
+import 'package:skanner_frontend/Widgets/Drawer/send_feedback.dart';
+import 'package:skanner_frontend/Widgets/Drawer/settings.dart';
+import 'package:skanner_frontend/Widgets/Drawer/contacts.dart';
 
-class MyApp extends StatelessWidget {
+void main() => runApp(const Skanner());
+
+class Skanner extends StatelessWidget {
+  const Skanner({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Skanner UI 0.0.4',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
       home: MyHomePage(title: 'Skanner'),
     );
   }
@@ -86,33 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         )),
       ),
-      bottomNavigationBar: FancyBottomBar(
-        items: [
-          FancyItem(
-            textColor: Colors.blueAccent.shade400,
-            title: 'Home',
-            icon: Icon(Icons.home_outlined),
-          ),
-          FancyItem(
-            textColor: Colors.blueAccent.shade400,
-            title: 'Buscar',
-            icon: Icon(Icons.search),
-          ),
-          FancyItem(
-            textColor: Colors.blueAccent.shade400,
-            title: 'Cuenta',
-            icon: Icon(Icons.account_circle_outlined),
-          ),
-          FancyItem(
-            textColor: Colors.blueAccent.shade400,
-            title: 'Configuraciones',
-            icon: Icon(Icons.settings_outlined),
-          ),
-        ],
-        onItemSelected: (index) {
-          print(index);
-        },
-      ),
+      bottomNavigationBar: const Fancy(),
       body: container,
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.blue.shade900,
