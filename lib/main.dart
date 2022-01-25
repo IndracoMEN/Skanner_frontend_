@@ -38,14 +38,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
   var currentPage = DrawerSections.dashboard;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -71,6 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
           centerTitle: true,
+          elevation: 5,
           title: Text(
             "Skanner",
             style: TextStyle(color: Colors.blueAccent.shade400),
@@ -92,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.blue.shade900,
         hoverColor: Colors.cyan,
-        onPressed: _incrementCounter,
+        onPressed: () {},
         tooltip: 'Nuevo Documento',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.

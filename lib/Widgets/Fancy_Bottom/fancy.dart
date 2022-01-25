@@ -1,10 +1,11 @@
-import 'package:fancy_bar/fancy_bar.dart';
 import 'package:flutter/material.dart';
 
-import 'package:skanner_frontend/Widgets/Dashboard/dashboard.dart';
-import 'package:skanner_frontend/functions/convertir.dart';
-import 'package:skanner_frontend/functions/editar.dart';
-import 'package:skanner_frontend/functions/traducir.dart';
+import 'package:fancy_bar/fancy_bar.dart';
+
+import 'package:skanner_frontend/Widgets/Bottom%20Navigation/bottom_navigation_account.dart';
+import 'package:skanner_frontend/Widgets/Bottom%20Navigation/bottom_navigation_search.dart';
+import 'package:skanner_frontend/Widgets/Bottom%20Navigation/bottom_navigation_settings.dart';
+import 'package:skanner_frontend/main.dart';
 
 class Fancy extends StatefulWidget {
   const Fancy({
@@ -42,20 +43,22 @@ class _FancyState extends State<Fancy> {
         ),
       ],
       onItemSelected: (index) {
-        print(index);
-
+        //home
         if (index == 0) {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => DashboardPage()));
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => MyHomePage()));
         } else if (index == 1) {
+          //buscar
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => Traducir()));
+              context, MaterialPageRoute(builder: (context) => Search()));
         } else if (index == 2) {
+          //cuenta
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => Convertir()));
+              context, MaterialPageRoute(builder: (context) => Account()));
         } else if (index == 3) {
+          //configuraciones
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => Editar()));
+              context, MaterialPageRoute(builder: (context) => Settings()));
         }
       },
     );
