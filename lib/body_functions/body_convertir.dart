@@ -18,7 +18,7 @@ class Body_convertir extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.only(top: size.height * 0.3),
                   height: 500,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                       topRight: Radius.circular(60),
@@ -48,13 +48,13 @@ class Pantalla_inferior_convertir extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text(
+          const Text(
             "convierte archivos a otro tipo",
             style: TextStyle(
               color: Colors.white,
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Text(
             "Conversor",
             style: Theme.of(context)
@@ -64,7 +64,7 @@ class Pantalla_inferior_convertir extends StatelessWidget {
           ),
           Row(
             children: <Widget>[
-              SizedBox(width: 160),
+              const SizedBox(width: 160),
               Expanded(
                 child: Image.network(
                   "https://cdn.pixabay.com/photo/2017/08/01/23/51/apple-2568755_960_720.jpg",
@@ -74,7 +74,7 @@ class Pantalla_inferior_convertir extends StatelessWidget {
               ),
             ],
           ),
-          Padding(
+          const Padding(
             padding: const EdgeInsets.only(top: 25, bottom: 20),
             child: Text("JPG a PDF", style: TextStyle(fontSize: 15)),
           ),
@@ -88,7 +88,7 @@ class Pantalla_inferior_convertir extends StatelessWidget {
           ),
           SizedBox(height: 25),
           Divider(),
-          Padding(
+          const Padding(
             padding: const EdgeInsets.only(top: 16, bottom: 20),
             child: Text("PPTX a PDF", style: TextStyle(fontSize: 15)),
           ),

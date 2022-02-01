@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class NotesPage extends StatefulWidget {
-  NotesPage({Key? key}) : super(key: key);
+  const NotesPage({Key? key}) : super(key: key);
 
   @override
   _NotesPageState createState() => _NotesPageState();
@@ -10,9 +10,8 @@ class NotesPage extends StatefulWidget {
 class _NotesPageState extends State<NotesPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: Center(
+    return const Center(
       child: Text("Notas"),
-    ));
+    );
   }
 }

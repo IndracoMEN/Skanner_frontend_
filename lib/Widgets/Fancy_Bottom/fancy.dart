@@ -24,22 +24,22 @@ class _FancyState extends State<Fancy> {
         FancyItem(
           textColor: Colors.blueAccent.shade400,
           title: 'Home',
-          icon: Icon(Icons.home_outlined),
+          icon: const Icon(Icons.home_outlined),
         ),
         FancyItem(
           textColor: Colors.blueAccent.shade400,
-          title: 'Buscar',
-          icon: Icon(Icons.search),
+          title: 'Archivos',
+          icon: const Icon(Icons.file_copy_outlined),
         ),
         FancyItem(
           textColor: Colors.blueAccent.shade400,
           title: 'Cuenta',
-          icon: Icon(Icons.account_circle_outlined),
+          icon: const Icon(Icons.account_circle_outlined),
         ),
         FancyItem(
           textColor: Colors.blueAccent.shade400,
           title: 'Configuraciones',
-          icon: Icon(Icons.settings_outlined),
+          icon: const Icon(Icons.settings_outlined),
         ),
       ],
       onItemSelected: (index) {
@@ -50,15 +50,15 @@ class _FancyState extends State<Fancy> {
         } else if (index == 1) {
           //buscar
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => Search()));
+              context, MaterialPageRoute(builder: (context) => const Search()));
         } else if (index == 2) {
           //cuenta
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => Account()));
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const Account()));
         } else if (index == 3) {
           //configuraciones
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => Settings()));
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const Settings()));
         }
       },
     );

@@ -18,7 +18,7 @@ class Body_Edicion extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.only(top: size.height * 0.3),
                   height: 500,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                       topRight: Radius.circular(60),
@@ -26,7 +26,7 @@ class Body_Edicion extends StatelessWidget {
                     ),
                   ),
                 ),
-                Pantalla_inferior_traductor(),
+                const Pantalla_inferior_traductor(),
               ],
             ),
           ),
@@ -48,13 +48,13 @@ class Pantalla_inferior_traductor extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text(
+          const Text(
             "Edita archivos desde tu dispositivo",
             style: TextStyle(
               color: Colors.white,
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Text(
             "Editor",
             style: Theme.of(context)
@@ -64,7 +64,7 @@ class Pantalla_inferior_traductor extends StatelessWidget {
           ),
           Row(
             children: <Widget>[
-              SizedBox(width: 160),
+              const SizedBox(width: 160),
               Expanded(
                 child: Image.network(
                   "https://cdn.pixabay.com/photo/2017/10/10/21/47/laptop-2838921_960_720.jpg",
@@ -74,8 +74,8 @@ class Pantalla_inferior_traductor extends StatelessWidget {
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 25, bottom: 20),
+          const Padding(
+            padding: EdgeInsets.only(top: 25, bottom: 20),
             child: Text("Editar archivo", style: TextStyle(fontSize: 15)),
           ),
           ElevatedButton(
@@ -86,10 +86,10 @@ class Pantalla_inferior_traductor extends StatelessWidget {
               primary: Colors.brown.shade700,
             ),
           ),
-          SizedBox(height: 25),
-          Divider(),
-          Padding(
-            padding: const EdgeInsets.only(top: 15, bottom: 20),
+          const SizedBox(height: 25),
+          const Divider(),
+          const Padding(
+            padding: EdgeInsets.only(top: 15, bottom: 20),
             child: Text("Modificar archivo", style: TextStyle(fontSize: 15)),
           ),
           ElevatedButton(

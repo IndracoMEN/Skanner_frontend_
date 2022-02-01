@@ -18,13 +18,14 @@ class DashboardPage extends StatelessWidget {
     const style = TextStyle(fontSize: 22.0, color: Colors.white);
     const double h = 200;
     const double w = 400;
+    const box = SizedBox(height: 30);
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: ListView(
           children: [
-            SizedBox(height: 30),
+            box,
             Material(
               elevation: elevation,
               borderRadius: borderRadius,
@@ -53,7 +54,7 @@ class DashboardPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 30),
+            box,
             Material(
               elevation: elevation,
               borderRadius: borderRadius,
@@ -82,7 +83,7 @@ class DashboardPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 30),
+            box,
             Material(
               elevation: elevation,
               borderRadius: borderRadius,
@@ -111,7 +112,7 @@ class DashboardPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 30),
+            box,
             Material(
               elevation: elevation,
               borderRadius: borderRadius,
@@ -139,7 +140,7 @@ class DashboardPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 30),
+            box,
             Material(
               elevation: elevation,
               borderRadius: borderRadius,
@@ -165,7 +166,7 @@ class DashboardPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 30)
+            box
           ],
         ),
       ),

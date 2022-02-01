@@ -64,6 +64,12 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
           centerTitle: true,
+          actions: [
+            IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.arrow_back_ios_new_outlined,
+                    color: Colors.blueAccent.shade400))
+          ],
           elevation: 5,
           title: Text(
             "Skanner",
