@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:skanner_frontend/body_functions/body_unir.dart';
+import 'package:skanner_frontend/main.dart';
 
 class Union extends StatelessWidget {
   @override
@@ -21,7 +22,10 @@ class Union_function extends StatelessWidget {
         backgroundColor: Colors.deepOrange.shade900,
         elevation: 0,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Skanner()));
+          },
           icon: Icon(
             Icons.arrow_back_ios,
             color: Colors.white,

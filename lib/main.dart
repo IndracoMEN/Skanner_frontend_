@@ -20,7 +20,7 @@ class Skanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Skanner UI 0.0.4',
       home: MyHomePage(title: 'Skanner'),
@@ -29,7 +29,7 @@ class Skanner extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, this.title}) : super(key: key);
+  const MyHomePage({Key? key, this.title}) : super(key: key);
 
   final String? title;
 
@@ -45,13 +45,13 @@ class _MyHomePageState extends State<MyHomePage> {
     var container;
 
     if (currentPage == DrawerSections.dashboard) {
-      container = DashboardPage();
+      container = const DashboardPage();
     } else if (currentPage == DrawerSections.contacts) {
-      container = CompartirPage();
+      container = const CompartirPage();
     } else if (currentPage == DrawerSections.events) {
       container = EventsPage();
     } else if (currentPage == DrawerSections.notes) {
-      container = NotesPage();
+      container = const NotesPage();
     } else if (currentPage == DrawerSections.settings) {
       container = SettingsPage();
     } else if (currentPage == DrawerSections.notifications) {
@@ -63,12 +63,18 @@ class _MyHomePageState extends State<MyHomePage> {
     }
     return Scaffold(
       appBar: AppBar(
+          leading: Builder(builder: (context) {
+            return IconButton(
+                onPressed: () => Scaffold.of(context).openDrawer(),
+                icon: Icon(Icons.menu_outlined,
+                    color: Colors.blueAccent.shade400));
+          }),
           centerTitle: true,
           actions: [
             IconButton(
                 onPressed: () {},
-                icon: Icon(Icons.arrow_back_ios_new_outlined,
-                    color: Colors.blueAccent.shade400))
+                icon: Icon(Icons.account_circle,
+                    color: Colors.blueAccent.shade400)),
           ],
           elevation: 5,
           title: Text(
@@ -78,13 +84,11 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Colors.grey.shade50),
       drawer: Drawer(
         child: SingleChildScrollView(
-            child: Container(
-          child: Column(
-            children: [
-              MyHeaderDrawer(),
-              MyDrawerList(),
-            ],
-          ),
+            child: Column(
+          children: [
+            const MyHeaderDrawer(),
+            MyDrawerList(),
+          ],
         )),
       ),
       bottomNavigationBar: const Fancy(),
@@ -94,14 +98,15 @@ class _MyHomePageState extends State<MyHomePage> {
         hoverColor: Colors.cyan,
         onPressed: () {},
         tooltip: 'Nuevo Documento',
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 
+  // ignore: non_constant_identifier_names
   Widget MyDrawerList() {
     return Container(
-      padding: EdgeInsets.only(top: 15),
+      padding: const EdgeInsets.only(top: 15),
       child: Column(
         children: [
           menuItem(1, "Funciones", Icons.functions_outlined,
@@ -112,12 +117,12 @@ class _MyHomePageState extends State<MyHomePage> {
               currentPage == DrawerSections.events ? true : false),
           menuItem(4, "Notas", Icons.notes,
               currentPage == DrawerSections.notes ? true : false),
-          Divider(),
+          const Divider(),
           menuItem(5, "Configuraciones", Icons.settings_outlined,
               currentPage == DrawerSections.settings ? true : false),
           menuItem(6, "Notificacioness", Icons.notifications_outlined,
               currentPage == DrawerSections.notifications ? true : false),
-          Divider(),
+          const Divider(),
           menuItem(7, "Politica de privacidad", Icons.privacy_tip_outlined,
               currentPage == DrawerSections.privacy_policy ? true : false),
           menuItem(8, "Enviar Recomendaciones", Icons.feedback_outlined,
@@ -154,7 +159,7 @@ class _MyHomePageState extends State<MyHomePage> {
           });
         },
         child: Padding(
-          padding: EdgeInsets.all(15.0),
+          padding: const EdgeInsets.all(15.0),
           child: Row(
             children: [
               Expanded(
@@ -164,7 +169,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 flex: 3,
                 child: Text(
                   title,
-                  style: TextStyle(color: Colors.black, fontSize: 16.0),
+                  style: const TextStyle(color: Colors.black, fontSize: 16.0),
                 ),
               ),
             ],
@@ -182,7 +187,9 @@ enum DrawerSections {
   notes,
   settings,
   notifications,
+  // ignore: constant_identifier_names
   privacy_policy,
+  // ignore: constant_identifier_names
   send_feedback,
 }
 //account, home, nav, search, settings

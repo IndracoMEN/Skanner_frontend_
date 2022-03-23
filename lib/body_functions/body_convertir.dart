@@ -49,7 +49,7 @@ class Pantalla_inferior_convertir extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           const Text(
-            "convierte archivos a otro tipo",
+            "convierte archivos a otro tipo.",
             style: TextStyle(
               color: Colors.white,
             ),

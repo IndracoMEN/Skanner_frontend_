@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:skanner_frontend/body_functions/body_edit.dart';
-import 'package:skanner_frontend/body_functions/body_traductor.dart';
+import 'package:skanner_frontend/main.dart';
 
 class Editar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Traductor",
+      title: "Traductor ",
       home: Editar_function(),
     );
   }
@@ -22,7 +22,10 @@ class Editar_function extends StatelessWidget {
         backgroundColor: Colors.brown.shade900,
         elevation: 0,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Skanner()));
+          },
           icon: Icon(
             Icons.arrow_back_ios,
             color: Colors.white,

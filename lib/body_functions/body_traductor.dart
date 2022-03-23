@@ -49,7 +49,7 @@ class Pantalla_inferior_traductor extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            "Traduce los archivos de tu dispositivo",
+            "Traduce los archivos de tu dispositivo.",
             style: TextStyle(
               color: Colors.white,
             ),

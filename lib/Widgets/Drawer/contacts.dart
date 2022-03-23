@@ -7,7 +7,7 @@ class CompartirPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         child: Center(
-      child: Text("Compartir"),
+      child: Text("Compartirrrrrr"),
     ));
   }
 }

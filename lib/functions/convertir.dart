@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:skanner_frontend/body_functions/body_convertir.dart';
+import 'package:skanner_frontend/main.dart';
 
 class Convertir extends StatelessWidget {
   @override
@@ -21,7 +22,10 @@ class Conversion_Function extends StatelessWidget {
         backgroundColor: Colors.lightGreen.shade900,
         elevation: 0,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+           Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Skanner()));
+          },
           icon: Icon(
             Icons.arrow_back_ios,
             color: Colors.white,
