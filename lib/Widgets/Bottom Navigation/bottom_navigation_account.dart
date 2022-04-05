@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../main.dart';
+
 class Account extends StatelessWidget {
   const Account({Key? key}) : super(key: key);
 
@@ -12,6 +14,13 @@ class Account extends StatelessWidget {
     );
     return Scaffold(
       appBar: AppBar(
+        leading: Builder(builder: (context) {
+          return IconButton(
+              onPressed: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const Skanner())),
+              icon: Icon(Icons.arrow_back_ios_new_outlined,
+                  color: Colors.blueAccent.shade400));
+        }),
         elevation: 0,
         backgroundColor: Colors.grey.shade900,
         actions: [
@@ -44,7 +53,7 @@ class Account extends StatelessWidget {
                     ),
                     //this.name
                     Text(
-                      "Indra Najera",
+                      "Indra Nájera",
                       style: text_style,
                     ),
                     //this.country

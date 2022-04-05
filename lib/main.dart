@@ -11,7 +11,7 @@ import 'package:skanner_frontend/Widgets/Drawer/notifications.dart';
 import 'package:skanner_frontend/Widgets/Drawer/privacy_policy.dart';
 import 'package:skanner_frontend/Widgets/Drawer/send_feedback.dart';
 import 'package:skanner_frontend/Widgets/Drawer/settings.dart';
-import 'package:skanner_frontend/Widgets/Drawer/contacts.dart';
+import 'package:skanner_frontend/Widgets/Drawer/compartir.dart';
 
 void main() => runApp(const Skanner());
 
@@ -79,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
           elevation: 5,
           title: Text(
             "Skanner",
-            style: TextStyle(color: Colors.blueAccent.shade400),
+            style: TextStyle(color: Colors.blueAccent.shade700),
           ),
           backgroundColor: Colors.grey.shade50),
       drawer: Drawer(

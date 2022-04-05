@@ -4,7 +4,6 @@ import 'package:fancy_bar/fancy_bar.dart';
 
 import 'package:skanner_frontend/Widgets/Bottom%20Navigation/bottom_navigation_account.dart';
 import 'package:skanner_frontend/Widgets/Bottom%20Navigation/bottom_navigation_search.dart';
-import 'package:skanner_frontend/Widgets/Bottom%20Navigation/bottom_navigation_settings.dart';
 import 'package:skanner_frontend/main.dart';
 
 class Fancy extends StatefulWidget {
@@ -36,11 +35,6 @@ class _FancyState extends State<Fancy> {
           title: 'Cuenta',
           icon: const Icon(Icons.account_circle_outlined),
         ),
-        FancyItem(
-          textColor: Colors.blueAccent.shade400,
-          title: 'Configuraciones',
-          icon: const Icon(Icons.settings_outlined),
-        ),
       ],
       onItemSelected: (index) {
         //home
@@ -55,10 +49,6 @@ class _FancyState extends State<Fancy> {
           //cuenta
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => const Account()));
-        } else if (index == 3) {
-          //configuraciones
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const Settings()));
         }
       },
     );
