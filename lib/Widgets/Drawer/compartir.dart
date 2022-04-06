@@ -55,7 +55,7 @@ class _CompartirPageState extends State<CompartirPage> {
           width: double.infinity,
           //no es constante, modificar segun el listado de archicvos de cada dispositivo
           child: const Text(
-            "Tarea_Fluidos de perforacion",
+            "Tarea Fluidos de perforacion",
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 12,
