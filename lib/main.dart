@@ -5,6 +5,8 @@ import 'package:skanner_frontend/Widgets/Fancy_Bottom/fancy.dart';
 
 import 'Widgets/Drawer/my_drawer_header.dart';
 
+import 'dart:ui';
+
 import 'package:skanner_frontend/Widgets/Drawer/events.dart';
 import 'package:skanner_frontend/Widgets/Drawer/notes.dart';
 import 'package:skanner_frontend/Widgets/Drawer/notifications.dart';
@@ -76,10 +78,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 icon: Icon(Icons.account_circle,
                     color: Colors.blueAccent.shade400)),
           ],
-          elevation: 5,
+          elevation: 0,
           title: Text(
             "Skanner",
-            style: TextStyle(color: Colors.blueAccent.shade700),
+            style: TextStyle(
+              color: Colors.blueAccent.shade700,
+              fontFamily: 'thin',
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+            ),
           ),
           backgroundColor: Colors.grey.shade50),
       drawer: Drawer(

@@ -8,10 +8,14 @@ class EventsPage extends StatefulWidget {
 }
 
 class _EventsPageState extends State<EventsPage> {
+  final style = TextStyle(fontSize: 62, fontWeight: FontWeight.bold);
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Container(child: Text("Eventos")),
+      child: Container(
+          child: Text(
+        "Eventos",
+      )),
     );
   }
 }

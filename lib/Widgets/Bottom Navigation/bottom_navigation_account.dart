@@ -9,7 +9,7 @@ class Account extends StatelessWidget {
   Widget build(BuildContext context) {
     // ignore: constant_identifier_names
     const text_style = TextStyle(
-      color: Colors.white,
+      color: Color.fromRGBO(21, 101, 192, 1),
       fontSize: 15,
     );
     return Scaffold(
@@ -18,22 +18,17 @@ class Account extends StatelessWidget {
           return IconButton(
               onPressed: () => Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const Skanner())),
-              icon: Icon(Icons.arrow_back_ios_new_outlined,
-                  color: Colors.blueAccent.shade400));
+              icon: const Icon(Icons.arrow_back_ios_new_outlined,
+                  color: Colors.white));
         }),
         elevation: 0,
-        backgroundColor: Colors.grey.shade900,
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.settings_applications_outlined)),
-        ],
+        backgroundColor: Colors.teal,
       ),
       body: ListView(
         children: [
           Container(
-            height: 80,
-            color: Colors.grey.shade900,
+            height: 120,
+            color: Colors.teal,
             child: Row(
               children: [
                 Container(width: 10),
@@ -54,12 +49,12 @@ class Account extends StatelessWidget {
                     //this.name
                     Text(
                       "Indra Nájera",
-                      style: text_style,
+                      style: TextStyle(color: Colors.white),
                     ),
                     //this.country
                     Text(
                       "Mexico",
-                      style: text_style,
+                      style: TextStyle(color: Colors.white),
                     )
                   ],
                 )
@@ -87,46 +82,13 @@ class Body_account extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
+        const Divider(color: Colors.black),
         Container(
-          color: Colors.grey.shade800,
+          //Color.fromRGBO(226, 217, 217, 1)
+          color: Colors.white,
           height: 600,
           child: Column(
             children: [
-              const SizedBox(height: 20),
-              Text(
-                "Iniciar sesión con:",
-                style: text_style,
-              ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(width: 190),
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.facebook_outlined,
-                        color: Colors.white),
-                    padding: const EdgeInsets.all(5),
-                  ),
-                  IconButton(
-                      onPressed: () {},
-                      icon:
-                          const Icon(Icons.email_outlined, color: Colors.white),
-                      padding: const EdgeInsets.all(5)),
-                  IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Icons.phone, color: Colors.white),
-                      padding: const EdgeInsets.all(5)),
-                ],
-              ),
-              const Divider(color: Colors.black45),
-              Padding(
-                padding: const EdgeInsets.only(top: 10, bottom: 20),
-                child: Text(
-                  "Archivos".toUpperCase(),
-                  style: text_style,
-                  textAlign: TextAlign.start,
-                ),
-              ),
               SizedBox(
                 height: 265,
                 width: double.infinity,
@@ -150,7 +112,7 @@ class Body_account extends StatelessWidget {
                             return Container(
                                 width: 130,
                                 height: 190,
-                                color: Colors.blue.shade800,
+                                color: Colors.teal,
                                 margin: const EdgeInsets.all(20));
                           }),
                     ),

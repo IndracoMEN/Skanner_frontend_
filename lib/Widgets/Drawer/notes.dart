@@ -23,35 +23,37 @@ class _NotesPageState extends State<NotesPage> {
         "2. Sunt cupidatat id dolore ex consequat tempor. Eiusmod ullamco nostrud in sunt consequat cupidatat. Eu labore ex in sunt reprehenderit tempor dolore occaecat cillum ut non duis dolor nostrud. Pariatur proident non tempor sunt amet sunt magna deserunt non aliquip nulla velit. Ad aliqua occaecat aute magna aliqua. Reprehenderit deserunt labore pariatur dolore.\n\n"
             .toString();
     final consideration3 =
-        "3. In officia exercitation adipisicing elit sunt. Eu elit adipisicing veniam ex est deserunt esse culpa. Esse est nostrud consectetur ad ad do aliquip magna eiusmod mollit velit culpa ullamco. Nostrud occaecat exercitation labore minim Lorem id nisi. Ut nulla irure excepteur occaecat pariatur cupidatat."
+        "3. In officia exercitatin adipisicing elit sunt. Eu elit adipisicing veniam ex est deserunt esse culpa. Esse est nostrud consectetur ad ad do aliquip magna eiusmod mollit velit culpa ullamco. Nostrud occaecat exercitation labore minim Lorem id nisi. Ut nulla irure excepteur occaecat pariatur cupidatat."
             .toString();
     final box = SizedBox(height: 10);
 
-    return Center(
-      child: Container(
-        margin: EdgeInsets.all(10),
-        height: size.height,
-        width: size.width * 0.80,
-        //color: Colors.green,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(height: 30),
-            Text(
-              "Consideraciones de uso",
-              style: style1,
-            ),
-            box,
-            Text(text_body),
-            Divider(color: Colors.amber.shade900),
-            Text(consideration1),
-            Divider(color: Colors.green.shade900),
-            Text(conseration2),
-            Divider(color: Colors.red.shade900),
-            Text(consideration3),
-          ],
+    return ListView(children: [
+      Center(
+        child: Container(
+          margin: EdgeInsets.all(10),
+          height: size.height,
+          width: size.width * 0.80,
+          //color: Colors.green,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(height: 30),
+              const Text(
+                "Consideraciones de uso",
+                style: style1,
+              ),
+              box,
+              Text(text_body),
+              Divider(color: Colors.amber.shade900),
+              Text(consideration1),
+              Divider(color: Colors.green.shade900),
+              Text(conseration2),
+              Divider(color: Colors.red.shade900),
+              Text(consideration3),
+            ],
+          ),
         ),
       ),
-    );
+    ]);
   }
 }

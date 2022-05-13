@@ -25,7 +25,7 @@ class DashboardPage extends StatelessWidget {
       home: Scaffold(
         body: ListView(
           children: [
-            box,
+            SizedBox(height: 10),
             Material(
               elevation: elevation,
               borderRadius: borderRadius,
