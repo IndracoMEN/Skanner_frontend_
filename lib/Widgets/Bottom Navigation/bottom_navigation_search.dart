@@ -22,15 +22,16 @@ class Search extends StatelessWidget {
                         color: Colors.blueAccent.shade400));
               }),
               centerTitle: true,
-              elevation: 5,
+              elevation: 0,
               title: Text(
-                "Documentoss",
+                "Mis documentos",
                 style: TextStyle(color: Colors.blueAccent.shade700),
               ),
               backgroundColor: Colors.grey.shade50),
           body: ListView(
             children: [
               //definir los atributos de los objetos de la clase inkwell
+              SizedBox(height: 20),
               inkwell_example(),
               SizedBox(height: 20),
               inkwell_example(),
@@ -68,18 +69,55 @@ class _inkwell_exampleState extends State<inkwell_example> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 20, right: 20, top: 15),
-      child: InkWell(
-        hoverColor: Colors.black,
-        onTap: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const Skanner()));
-        },
-        child: Container(
-          height: 120,
-          width: double.infinity,
-          color: myColors[index],
+    return Container(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 20, right: 20, top: 15),
+        child: InkWell(
+          hoverColor: Colors.black,
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const Skanner()));
+          },
+          child: Container(
+            height: 170,
+            width: double.infinity,
+            //color: myColors[index],
+            child: Row(
+              children: [
+                Container(
+                  height: double.maxFinite,
+                  width: 120,
+                  color: Colors.red,
+                  child: const Center(
+                    child: Text(
+                      "PDF",
+                      style: TextStyle(color: Colors.white, fontSize: 25),
+                    ),
+                  ),
+                ),
+                Container(
+                    height: 120,
+                    width: 200,
+                    //color: Colors.yellow,
+                    child: Stack(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              top: 8, bottom: 8, right: 8, left: 25),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text("Fundamentos de programacion\n"),
+                              Text("126 MB\n"),
+                              Text("12-Dic-2022   17:34 PM")
+                            ],
+                          ),
+                        ),
+                      ],
+                    ))
+              ],
+            ),
+          ),
         ),
       ),
     );
