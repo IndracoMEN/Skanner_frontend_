@@ -25,6 +25,20 @@ class DashboardPage extends StatelessWidget {
       home: Scaffold(
         body: ListView(
           children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 15.0, top: 30, bottom: 20),
+              child: Text(
+                "Indra, ¿Qué hacemos hoy?",
+                textAlign: TextAlign.start,
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.blueAccent.shade700,
+                  fontFamily: 'serif',
+                  //fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            Divider(color: Colors.red),
             SizedBox(height: 10),
             Material(
               elevation: elevation,
@@ -105,7 +119,7 @@ class DashboardPage extends StatelessWidget {
                       width: w,
                       fit: BoxFit.cover,
                       child: Center(
-                        child: Text("Unir", style: style),
+                        child: Text("Unir/Dividir ", style: style),
                       ),
                     ),
                   ],
@@ -133,7 +147,7 @@ class DashboardPage extends StatelessWidget {
                       width: w,
                       fit: BoxFit.cover,
                       child: Center(
-                        child: Text("Convertir", style: style),
+                        child: Text("Convertir ", style: style),
                       ),
                     ),
                   ],
@@ -160,7 +174,7 @@ class DashboardPage extends StatelessWidget {
                       height: h,
                       width: w,
                       fit: BoxFit.cover,
-                      child: Center(child: Text("Editar", style: style)),
+                      child: Center(child: Text("Editar ", style: style)),
                     ),
                   ],
                 ),

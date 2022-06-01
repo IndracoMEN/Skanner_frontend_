@@ -69,14 +69,14 @@ class _MyHomePageState extends State<MyHomePage> {
             return IconButton(
                 onPressed: () => Scaffold.of(context).openDrawer(),
                 icon: Icon(Icons.menu_outlined,
-                    color: Colors.blueAccent.shade400));
+                    color: Colors.blueAccent.shade700));
           }),
           centerTitle: true,
           actions: [
             IconButton(
                 onPressed: () {},
                 icon: Icon(Icons.account_circle,
-                    color: Colors.blueAccent.shade400)),
+                    color: Colors.blueAccent.shade700)),
           ],
           elevation: 0,
           title: Text(

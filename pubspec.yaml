@@ -38,6 +38,7 @@ dependencies:
   card_swiper: ^2.0.3
   share_plus: ^4.0.3
   google_fonts: ^2.3.1
+  flutter_speed_dial: ^6.0.0
   
 dev_dependencies:
   flutter_test:
@@ -93,6 +94,14 @@ flutter:
         - asset: fonts/ComforterBrush-Regular.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
+
+    - family: serif
+      fonts:
+        - asset: fonts/PTSerif-BoldItalic.ttf
+
+    - family: serif_2
+      fonts:
+        - asset: fonts/PTSerif-Italic.ttf      
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
