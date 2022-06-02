@@ -6,7 +6,6 @@ class Body_traductor extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //provee el ancho y alto total
     Size size = MediaQuery.of(context).size;
     return SingleChildScrollView(
       child: Column(
@@ -17,8 +16,8 @@ class Body_traductor extends StatelessWidget {
               children: <Widget>[
                 Container(
                   margin: EdgeInsets.only(top: size.height * 0.3),
-                  height: 500,
-                  decoration: BoxDecoration(
+                  height: MediaQuery.of(context).size.height,
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                       topRight: Radius.circular(60),
@@ -26,7 +25,7 @@ class Body_traductor extends StatelessWidget {
                     ),
                   ),
                 ),
-                Pantalla_inferior_traductor(),
+                const Pantalla_inferior_traductor(),
               ],
             ),
           ),
@@ -43,66 +42,74 @@ class Pantalla_inferior_traductor extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Text(
-            "Traduce los archivos de tu dispositivo.",
-            style: TextStyle(
-              color: Colors.white,
-            ),
-          ),
-          SizedBox(height: 10),
-          Text(
-            "Traductor",
-            style: Theme.of(context)
-                .textTheme
-                .headline4!
-                .copyWith(color: Colors.white70, fontWeight: FontWeight.bold),
-          ),
-          Row(
-            children: <Widget>[
-              SizedBox(width: 160),
-              Expanded(
-                child: Image.network(
-                  "https://cdn.pixabay.com/photo/2016/10/18/20/18/international-1751293_960_720.png",
-                  height: 250,
-                  fit: BoxFit.fitHeight,
-                ),
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            const Text(
+              "Traduce los archivos de tu dispositivo.",
+              style: TextStyle(
+                color: Colors.white,
               ),
-            ],
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 25, bottom: 20),
-            child: Text("Traducir desde imagen de la galería",
-                style: TextStyle(fontSize: 15)),
-          ),
-          ElevatedButton(
-            onPressed: () {},
-            child: Text("Traducir imagen".toUpperCase()),
-            style: ElevatedButton.styleFrom(
-              onPrimary: Colors.white,
-              primary: Colors.indigo.shade900,
             ),
-          ),
-          SizedBox(height: 25),
-          Divider(),
-          Padding(
-            padding: const EdgeInsets.only(top: 15, bottom: 20),
-            child: Text("Traducir PDF desde archivo",
-                style: TextStyle(fontSize: 15)),
-          ),
-          ElevatedButton(
-            onPressed: () {},
-            child: Text("Traducir PDF".toUpperCase()),
-            style: ElevatedButton.styleFrom(
-              onPrimary: Colors.white,
-              primary: Colors.indigo.shade900,
+            const SizedBox(height: 10),
+            Text(
+              "Traductor",
+              style: Theme.of(context)
+                  .textTheme
+                  .headline4!
+                  .copyWith(color: Colors.white70, fontWeight: FontWeight.bold),
             ),
-          ),
-        ],
+            Row(
+              children: <Widget>[
+                Expanded(
+                  child: Container(
+                    width: 100,
+                  ),
+                ),
+                Container(
+                  margin: const EdgeInsets.all(10),
+                  height: MediaQuery.of(context).size.height * 0.25,
+                  width: MediaQuery.of(context).size.width * 0.50,
+                  child: Image.network(
+                    "https://cdn.pixabay.com/photo/2016/10/18/20/18/international-1751293_960_720.png",
+                    fit: BoxFit.fill,
+                  ),
+                ),
+              ],
+            ),
+            const Padding(
+              padding: EdgeInsets.only(top: 25, bottom: 20),
+              child: Text("Traducir desde imagen de la galería",
+                  style: TextStyle(fontSize: 15)),
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text("Traducir imagen".toUpperCase()),
+              style: ElevatedButton.styleFrom(
+                onPrimary: Colors.white,
+                primary: Colors.indigo.shade900,
+              ),
+            ),
+            SizedBox(height: 25),
+            Divider(),
+            Padding(
+              padding: const EdgeInsets.only(top: 15, bottom: 20),
+              child: Text("Traducir PDF desde archivo",
+                  style: TextStyle(fontSize: 15)),
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text("Traducir PDF".toUpperCase()),
+              style: ElevatedButton.styleFrom(
+                onPrimary: Colors.white,
+                primary: Colors.indigo.shade900,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

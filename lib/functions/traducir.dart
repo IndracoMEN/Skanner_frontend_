@@ -26,13 +26,13 @@ class Translate_function extends StatelessWidget {
             Navigator.push(
                 context, MaterialPageRoute(builder: (context) => Skanner()));
           },
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios,
             color: Colors.white,
           ),
         ),
       ),
-      body: Body_traductor(),
+      body: const Body_traductor(),
     );
   }
 }

@@ -3,6 +3,8 @@ import 'package:skanner_frontend/body_functions/body_convertir.dart';
 import 'package:skanner_frontend/main.dart';
 
 class Convertir extends StatelessWidget {
+  const Convertir({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -23,16 +25,16 @@ class Conversion_Function extends StatelessWidget {
         elevation: 0,
         leading: IconButton(
           onPressed: () {
-           Navigator.push(
+            Navigator.push(
                 context, MaterialPageRoute(builder: (context) => Skanner()));
           },
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios,
             color: Colors.white,
           ),
         ),
       ),
-      body: Body_convertir(),
+      body: const Body_convertir(),
     );
   }
 }

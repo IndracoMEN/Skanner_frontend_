@@ -23,16 +23,16 @@ class Escaner_Function extends StatelessWidget {
         elevation: 0,
         leading: IconButton(
           onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Skanner()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const Skanner()));
           },
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios,
             color: Colors.white,
           ),
         ),
       ),
-      body: Body_escaner(),
+      body: const Body_escaner(),
     );
   }
 }

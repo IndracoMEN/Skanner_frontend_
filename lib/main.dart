@@ -1,7 +1,12 @@
+import 'package:skanner_frontend/Widgets/Bottom%20Navigation/bottom_navigation_account.dart';
 import 'package:skanner_frontend/Widgets/Dashboard/dashboard.dart';
 
 import 'package:flutter/material.dart';
 import 'package:skanner_frontend/Widgets/Fancy_Bottom/fancy.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+import 'package:skanner_frontend/functions/escanear.dart';
+import 'package:skanner_frontend/functions/traducir.dart';
+import 'package:skanner_frontend/functions/unir.dart';
 
 import 'Widgets/Drawer/my_drawer_header.dart';
 
@@ -74,9 +79,15 @@ class _MyHomePageState extends State<MyHomePage> {
           centerTitle: true,
           actions: [
             IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.account_circle,
-                    color: Colors.blueAccent.shade700)),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const Account()));
+              },
+              icon: Icon(
+                Icons.account_circle,
+                color: Colors.blueAccent.shade700,
+              ),
+            ),
           ],
           elevation: 0,
           title: Text(
@@ -100,13 +111,37 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       bottomNavigationBar: const Fancy(),
       body: container,
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: SpeedDial(
+        animatedIcon: AnimatedIcons.menu_arrow,
         backgroundColor: Colors.blue.shade900,
-        hoverColor: Colors.cyan,
-        onPressed: () {},
-        tooltip: 'Nuevo Documento',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+        overlayColor: Colors.black,
+        overlayOpacity: 0.4,
+        spacing: 15,
+        spaceBetweenChildren: 10,
+        children: [
+          SpeedDialChild(
+              child: Icon(Icons.file_copy_outlined),
+              label: "Escanear PDF",
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Escanear()));
+              }),
+          SpeedDialChild(
+              child: Icon(Icons.compare_arrows_outlined),
+              label: "Traducir PDF",
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Traducir()));
+              }),
+          SpeedDialChild(
+              child: Icon(Icons.join_full_outlined),
+              label: "Unir PDF",
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Union()));
+              }),
+        ],
+      ),
     );
   }
 

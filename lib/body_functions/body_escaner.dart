@@ -17,8 +17,8 @@ class Body_escaner extends StatelessWidget {
               children: <Widget>[
                 Container(
                   margin: EdgeInsets.only(top: size.height * 0.3),
-                  height: 500,
-                  decoration: BoxDecoration(
+                  height: MediaQuery.of(context).size.height,
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                       topRight: Radius.circular(60),
@@ -48,13 +48,13 @@ class Pantalla_inferior_escaner extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text(
+          const Text(
             "convierte imagenes en archivos PDF",
             style: TextStyle(
               color: Colors.white,
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Text(
             "Escáner",
             style: Theme.of(context)
@@ -64,18 +64,24 @@ class Pantalla_inferior_escaner extends StatelessWidget {
           ),
           Row(
             children: <Widget>[
-              SizedBox(width: 160),
               Expanded(
+                child: Container(
+                  width: 100,
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.all(10),
+                height: MediaQuery.of(context).size.height * 0.25,
+                width: MediaQuery.of(context).size.width * 0.50,
                 child: Image.network(
                   "https://cdn.pixabay.com/photo/2012/04/02/16/55/adobe-24943_960_720.png",
-                  height: 250,
-                  fit: BoxFit.fitHeight,
+                  fit: BoxFit.fill,
                 ),
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 25, bottom: 20),
+          const Padding(
+            padding: EdgeInsets.only(top: 25, bottom: 20),
             child: Text("Importar imagen desde galería",
                 style: TextStyle(fontSize: 15)),
           ),
@@ -87,10 +93,10 @@ class Pantalla_inferior_escaner extends StatelessWidget {
               primary: Colors.red.shade900,
             ),
           ),
-          SizedBox(height: 25),
-          Divider(),
-          Padding(
-            padding: const EdgeInsets.only(top: 15, bottom: 20),
+          const SizedBox(height: 25),
+          const Divider(),
+          const Padding(
+            padding: EdgeInsets.only(top: 15, bottom: 20),
             child: Text("Capturar imagen con camara",
                 style: TextStyle(fontSize: 15)),
           ),

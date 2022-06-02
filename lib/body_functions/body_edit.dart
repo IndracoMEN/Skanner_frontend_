@@ -17,7 +17,7 @@ class Body_Edicion extends StatelessWidget {
               children: <Widget>[
                 Container(
                   margin: EdgeInsets.only(top: size.height * 0.3),
-                  height: 500,
+                  height: MediaQuery.of(context).size.height,
                   decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
@@ -64,12 +64,18 @@ class Pantalla_inferior_traductor extends StatelessWidget {
           ),
           Row(
             children: <Widget>[
-              const SizedBox(width: 160),
               Expanded(
+                child: Container(
+                  width: 100,
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.all(10),
+                height: MediaQuery.of(context).size.height * 0.25,
+                width: MediaQuery.of(context).size.width * 0.50,
                 child: Image.network(
                   "https://cdn.pixabay.com/photo/2017/10/10/21/47/laptop-2838921_960_720.jpg",
-                  height: 250,
-                  fit: BoxFit.fitHeight,
+                  fit: BoxFit.fill,
                 ),
               ),
             ],

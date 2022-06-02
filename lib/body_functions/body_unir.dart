@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Body_union extends StatelessWidget {
@@ -6,8 +5,8 @@ class Body_union extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //provee el ancho y alto total
     Size size = MediaQuery.of(context).size;
+
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
@@ -17,8 +16,8 @@ class Body_union extends StatelessWidget {
               children: <Widget>[
                 Container(
                   margin: EdgeInsets.only(top: size.height * 0.3),
-                  height: 500,
-                  decoration: BoxDecoration(
+                  height: MediaQuery.of(context).size.height,
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                       topRight: Radius.circular(60),
@@ -26,7 +25,7 @@ class Body_union extends StatelessWidget {
                     ),
                   ),
                 ),
-                Pantalla_inferior_union(),
+                const Pantalla_inferior_union(),
               ],
             ),
           ),
@@ -36,6 +35,7 @@ class Body_union extends StatelessWidget {
   }
 }
 
+// ignore: camel_case_types
 class Pantalla_inferior_union extends StatelessWidget {
   const Pantalla_inferior_union({
     Key? key,
@@ -48,13 +48,13 @@ class Pantalla_inferior_union extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text(
+          const Text(
             "Unir archivos PDF",
             style: TextStyle(
               color: Colors.white,
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Padding(
             padding: const EdgeInsets.only(bottom: 12),
             child: Text(
@@ -67,17 +67,24 @@ class Pantalla_inferior_union extends StatelessWidget {
           ),
           Row(
             children: <Widget>[
-              SizedBox(width: 160),
               Expanded(
+                child: Container(
+                  width: 100,
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.all(10),
+                height: MediaQuery.of(context).size.height * 0.25,
+                width: MediaQuery.of(context).size.width * 0.50,
                 child: Image.network(
                   "https://cdn.pixabay.com/photo/2014/04/03/10/41/optical-illusion-311130_960_720.png",
-                  height: 200,
+                  fit: BoxFit.fill,
                 ),
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 25, bottom: 20),
+          const Padding(
+            padding: EdgeInsets.only(top: 25, bottom: 20),
             child: Text("Dividir archivos PDF", style: TextStyle(fontSize: 15)),
           ),
           ElevatedButton(
@@ -88,10 +95,10 @@ class Pantalla_inferior_union extends StatelessWidget {
               primary: Colors.deepOrange.shade900,
             ),
           ),
-          SizedBox(height: 25),
-          Divider(),
-          Padding(
-            padding: const EdgeInsets.only(top: 15, bottom: 20),
+          const SizedBox(height: 25),
+          const Divider(),
+          const Padding(
+            padding: EdgeInsets.only(top: 15, bottom: 20),
             child: Text("Unir archivos PDF", style: TextStyle(fontSize: 15)),
           ),
           ElevatedButton(
