@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class Body_traductor extends StatelessWidget {
   const Body_traductor({Key? key}) : super(key: key);
@@ -86,22 +87,22 @@ class Pantalla_inferior_traductor extends StatelessWidget {
                   style: TextStyle(fontSize: 15)),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () => showToast("Traduciendo imagen..."),
               child: Text("Traducir imagen".toUpperCase()),
               style: ElevatedButton.styleFrom(
                 onPrimary: Colors.white,
                 primary: Colors.indigo.shade900,
               ),
             ),
-            SizedBox(height: 25),
-            Divider(),
-            Padding(
-              padding: const EdgeInsets.only(top: 15, bottom: 20),
+            const SizedBox(height: 25),
+            const Divider(),
+            const Padding(
+              padding: EdgeInsets.only(top: 15, bottom: 20),
               child: Text("Traducir PDF desde archivo",
                   style: TextStyle(fontSize: 15)),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () => showToast("Traduciendo PDF..."),
               child: Text("Traducir PDF".toUpperCase()),
               style: ElevatedButton.styleFrom(
                 onPrimary: Colors.white,
@@ -112,5 +113,11 @@ class Pantalla_inferior_traductor extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Future showToast(String message) async {
+    await Fluttertoast.cancel();
+
+    Fluttertoast.showToast(msg: message, fontSize: 18);
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class Body_Edicion extends StatelessWidget {
   const Body_Edicion({Key? key}) : super(key: key);
@@ -74,7 +75,7 @@ class Pantalla_inferior_traductor extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * 0.25,
                 width: MediaQuery.of(context).size.width * 0.50,
                 child: Image.network(
-                  "https://cdn.pixabay.com/photo/2017/10/10/21/47/laptop-2838921_960_720.jpg",
+                  "https://cdn.pixabay.com/photo/2017/10/14/17/57/computer-2851285_960_720.png",
                   fit: BoxFit.fill,
                 ),
               ),
@@ -85,11 +86,11 @@ class Pantalla_inferior_traductor extends StatelessWidget {
             child: Text("Editar archivo", style: TextStyle(fontSize: 15)),
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () => showToast("Editando..."),
             child: Text("Editar PDF".toUpperCase()),
             style: ElevatedButton.styleFrom(
               onPrimary: Colors.white,
-              primary: Colors.brown.shade700,
+              primary: Colors.lightGreen.shade700,
             ),
           ),
           const SizedBox(height: 25),
@@ -99,15 +100,21 @@ class Pantalla_inferior_traductor extends StatelessWidget {
             child: Text("Modificar archivo", style: TextStyle(fontSize: 15)),
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () => showToast("Modificando..."),
             child: Text("Modificaar PDF".toUpperCase()),
             style: ElevatedButton.styleFrom(
               onPrimary: Colors.white,
-              primary: Colors.brown.shade700,
+              primary: Colors.lightGreen.shade700,
             ),
           ),
         ],
       ),
     );
+  }
+
+  Future showToast(String message) async {
+    await Fluttertoast.cancel();
+
+    Fluttertoast.showToast(msg: message, fontSize: 18);
   }
 }

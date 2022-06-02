@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class Body_union extends StatelessWidget {
   const Body_union({Key? key}) : super(key: key);
@@ -88,7 +89,7 @@ class Pantalla_inferior_union extends StatelessWidget {
             child: Text("Dividir archivos PDF", style: TextStyle(fontSize: 15)),
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () => showToast("Dividiendo documentos..."),
             child: Text("Dividir PDF".toUpperCase()),
             style: ElevatedButton.styleFrom(
               onPrimary: Colors.white,
@@ -102,8 +103,8 @@ class Pantalla_inferior_union extends StatelessWidget {
             child: Text("Unir archivos PDF", style: TextStyle(fontSize: 15)),
           ),
           ElevatedButton(
-            onPressed: () {},
-            child: Text("Unir PDF".toUpperCase()),
+            onPressed: () => showToast("Uniendo documentos..."),
+            child: Text("Unir documentos".toUpperCase()),
             style: ElevatedButton.styleFrom(
               onPrimary: Colors.white,
               primary: Colors.deepOrange.shade900,
@@ -112,5 +113,11 @@ class Pantalla_inferior_union extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Future showToast(String message) async {
+    await Fluttertoast.cancel();
+
+    Fluttertoast.showToast(msg: message, fontSize: 18);
   }
 }

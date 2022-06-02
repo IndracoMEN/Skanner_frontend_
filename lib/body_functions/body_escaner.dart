@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class Body_escaner extends StatelessWidget {
   const Body_escaner({Key? key}) : super(key: key);
@@ -86,7 +87,7 @@ class Pantalla_inferior_escaner extends StatelessWidget {
                 style: TextStyle(fontSize: 15)),
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () => showToast("Importando..."),
             child: Text("Importar".toUpperCase()),
             style: ElevatedButton.styleFrom(
               onPrimary: Colors.white,
@@ -101,7 +102,7 @@ class Pantalla_inferior_escaner extends StatelessWidget {
                 style: TextStyle(fontSize: 15)),
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () => showToast("Capturando..."),
             child: Text("Capturar".toUpperCase()),
             style: ElevatedButton.styleFrom(
               onPrimary: Colors.white,
@@ -111,5 +112,11 @@ class Pantalla_inferior_escaner extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Future showToast(String message) async {
+    await Fluttertoast.cancel();
+
+    Fluttertoast.showToast(msg: message, fontSize: 18);
   }
 }

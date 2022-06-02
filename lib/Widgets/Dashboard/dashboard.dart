@@ -28,7 +28,7 @@ class DashboardPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 15.0, top: 30, bottom: 20),
               child: Text(
-                "Indra, ¿Qué hacemos hoy?",
+                "Indra, ¿Qué haremos hoy?",
                 textAlign: TextAlign.start,
                 style: TextStyle(
                   fontSize: 18,
@@ -38,8 +38,8 @@ class DashboardPage extends StatelessWidget {
                 ),
               ),
             ),
-            Divider(color: Colors.red),
-            SizedBox(height: 10),
+            const Divider(color: Colors.red),
+            const SizedBox(height: 10),
             Material(
               elevation: elevation,
               borderRadius: borderRadius,
@@ -54,13 +54,13 @@ class DashboardPage extends StatelessWidget {
                   mainAxisSize: size,
                   children: [
                     Ink.image(
-                      image: NetworkImage(
+                      image: const NetworkImage(
                         "https://cdn.pixabay.com/photo/2018/12/10/10/21/earth-3866609_960_720.jpg",
                       ),
                       height: h,
                       width: w,
                       fit: BoxFit.cover,
-                      child: Center(
+                      child: const Center(
                         child: Text("Traducir", style: style),
                       ),
                     ),
@@ -83,13 +83,13 @@ class DashboardPage extends StatelessWidget {
                   mainAxisSize: size,
                   children: [
                     Ink.image(
-                      image: NetworkImage(
+                      image: const NetworkImage(
                         "https://cdn.pixabay.com/photo/2017/09/28/21/56/print-2797178_960_720.jpg",
                       ),
                       height: h,
                       width: w,
                       fit: BoxFit.cover,
-                      child: Center(
+                      child: const Center(
                         child: Text("Escanear", style: style),
                       ),
                     ),
@@ -112,13 +112,13 @@ class DashboardPage extends StatelessWidget {
                   mainAxisSize: size,
                   children: [
                     Ink.image(
-                      image: NetworkImage(
+                      image: const NetworkImage(
                         "https://cdn.pixabay.com/photo/2016/10/07/12/35/puzzle-1721464_960_720.jpg",
                       ),
                       height: h,
                       width: w,
                       fit: BoxFit.cover,
-                      child: Center(
+                      child: const Center(
                         child: Text("Unir/Dividir ", style: style),
                       ),
                     ),
@@ -140,13 +140,13 @@ class DashboardPage extends StatelessWidget {
                 child: Column(
                   children: [
                     Ink.image(
-                      image: NetworkImage(
+                      image: const NetworkImage(
                         "https://cdn.pixabay.com/photo/2018/11/15/09/15/documents-3816835_960_720.jpg",
                       ),
                       height: h,
                       width: w,
                       fit: BoxFit.cover,
-                      child: Center(
+                      child: const Center(
                         child: Text("Convertir ", style: style),
                       ),
                     ),
@@ -168,13 +168,18 @@ class DashboardPage extends StatelessWidget {
                 child: Column(
                   children: [
                     Ink.image(
-                      image: NetworkImage(
+                      image: const NetworkImage(
                         "https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537_960_720.jpg",
                       ),
                       height: h,
                       width: w,
                       fit: BoxFit.cover,
-                      child: Center(child: Text("Editar ", style: style)),
+                      child: const Center(
+                        child: Text(
+                          "Editar ",
+                          style: style,
+                        ),
+                      ),
                     ),
                   ],
                 ),

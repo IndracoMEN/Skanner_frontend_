@@ -12,9 +12,7 @@ import 'Widgets/Drawer/my_drawer_header.dart';
 
 import 'dart:ui';
 
-import 'package:skanner_frontend/Widgets/Drawer/events.dart';
 import 'package:skanner_frontend/Widgets/Drawer/notes.dart';
-import 'package:skanner_frontend/Widgets/Drawer/notifications.dart';
 import 'package:skanner_frontend/Widgets/Drawer/privacy_policy.dart';
 import 'package:skanner_frontend/Widgets/Drawer/send_feedback.dart';
 import 'package:skanner_frontend/Widgets/Drawer/settings.dart';
@@ -55,14 +53,10 @@ class _MyHomePageState extends State<MyHomePage> {
       container = const DashboardPage();
     } else if (currentPage == DrawerSections.contacts) {
       container = const CompartirPage();
-    } else if (currentPage == DrawerSections.events) {
-      container = EventsPage();
     } else if (currentPage == DrawerSections.notes) {
       container = const NotesPage();
     } else if (currentPage == DrawerSections.settings) {
       container = SettingsPage();
-    } else if (currentPage == DrawerSections.notifications) {
-      container = NotificationsPage();
     } else if (currentPage == DrawerSections.privacy_policy) {
       container = PrivacyPage();
     } else if (currentPage == DrawerSections.send_feedback) {
@@ -120,21 +114,21 @@ class _MyHomePageState extends State<MyHomePage> {
         spaceBetweenChildren: 10,
         children: [
           SpeedDialChild(
-              child: Icon(Icons.file_copy_outlined),
+              child: const Icon(Icons.file_copy_outlined),
               label: "Escanear PDF",
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => Escanear()));
               }),
           SpeedDialChild(
-              child: Icon(Icons.compare_arrows_outlined),
+              child: const Icon(Icons.compare_arrows_outlined),
               label: "Traducir PDF",
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => Traducir()));
               }),
           SpeedDialChild(
-              child: Icon(Icons.join_full_outlined),
+              child: const Icon(Icons.join_inner_sharp),
               label: "Unir PDF",
               onTap: () {
                 Navigator.push(
@@ -153,21 +147,17 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           menuItem(1, "Funciones", Icons.functions_outlined,
               currentPage == DrawerSections.dashboard ? true : false),
-          menuItem(2, "Compartir", Icons.share_outlined,
+          menuItem(2, "Compartir Archivos", Icons.share_outlined,
               currentPage == DrawerSections.contacts ? true : false),
-          menuItem(3, "Eventos", Icons.event,
-              currentPage == DrawerSections.events ? true : false),
-          menuItem(4, "Notas", Icons.notes,
+          const Divider(),
+          menuItem(3, "Notas", Icons.notes,
               currentPage == DrawerSections.notes ? true : false),
-          const Divider(),
-          menuItem(5, "Configuraciones", Icons.settings_outlined,
+          menuItem(4, "Configuraciones", Icons.settings_outlined,
               currentPage == DrawerSections.settings ? true : false),
-          menuItem(6, "Notificacioness", Icons.notifications_outlined,
-              currentPage == DrawerSections.notifications ? true : false),
           const Divider(),
-          menuItem(7, "Politica de privacidad", Icons.privacy_tip_outlined,
+          menuItem(5, "Politica de privacidad", Icons.privacy_tip_outlined,
               currentPage == DrawerSections.privacy_policy ? true : false),
-          menuItem(8, "Enviar Recomendaciones", Icons.feedback_outlined,
+          menuItem(6, "Enviar Recomendaciones", Icons.feedback_outlined,
               currentPage == DrawerSections.send_feedback ? true : false),
         ],
       ),
@@ -186,16 +176,12 @@ class _MyHomePageState extends State<MyHomePage> {
             } else if (id == 2) {
               currentPage = DrawerSections.contacts;
             } else if (id == 3) {
-              currentPage = DrawerSections.events;
-            } else if (id == 4) {
               currentPage = DrawerSections.notes;
-            } else if (id == 5) {
+            } else if (id == 4) {
               currentPage = DrawerSections.settings;
-            } else if (id == 6) {
-              currentPage = DrawerSections.notifications;
-            } else if (id == 7) {
+            } else if (id == 5) {
               currentPage = DrawerSections.privacy_policy;
-            } else if (id == 8) {
+            } else if (id == 6) {
               currentPage = DrawerSections.send_feedback;
             }
           });
@@ -225,10 +211,10 @@ class _MyHomePageState extends State<MyHomePage> {
 enum DrawerSections {
   dashboard,
   contacts,
-  events,
+  //events,
   notes,
   settings,
-  notifications,
+  //notifications,
   // ignore: constant_identifier_names
   privacy_policy,
   // ignore: constant_identifier_names

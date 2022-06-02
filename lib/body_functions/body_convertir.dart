@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class Body_convertir extends StatelessWidget {
   const Body_convertir({Key? key}) : super(key: key);
@@ -74,7 +75,7 @@ class Pantalla_inferior_convertir extends StatelessWidget {
                   height: MediaQuery.of(context).size.height * 0.25,
                   width: MediaQuery.of(context).size.width * 0.50,
                   child: Image.network(
-                    "https://cdn.pixabay.com/photo/2017/08/01/23/51/apple-2568755_960_720.jpg",
+                    "https://cdn.pixabay.com/photo/2014/04/02/16/17/arrow-306811_960_720.png",
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -85,13 +86,13 @@ class Pantalla_inferior_convertir extends StatelessWidget {
               child: Text("JPG a PDF", style: TextStyle(fontSize: 15)),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () => showToast("Convirtiendo..."),
               child: Text(
                 "convertir".toUpperCase(),
               ),
               style: ElevatedButton.styleFrom(
                 onPrimary: Colors.white,
-                primary: Colors.lightGreen.shade900,
+                primary: Colors.blue.shade600,
               ),
             ),
             const SizedBox(height: 25),
@@ -104,18 +105,24 @@ class Pantalla_inferior_convertir extends StatelessWidget {
               ),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () => showToast("Capturando..."),
               child: Text(
                 "Capturar".toUpperCase(),
               ),
               style: ElevatedButton.styleFrom(
                 onPrimary: Colors.white,
-                primary: Colors.lightGreen.shade900,
+                primary: Colors.blue.shade600,
               ),
             ),
           ],
         ),
       ),
     );
+  }
+
+  Future showToast(String message) async {
+    await Fluttertoast.cancel();
+
+    Fluttertoast.showToast(msg: message, fontSize: 18);
   }
 }

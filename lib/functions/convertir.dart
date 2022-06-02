@@ -19,9 +19,9 @@ class Conversion_Function extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightGreen.shade900,
+      backgroundColor: Colors.blue.shade800,
       appBar: AppBar(
-        backgroundColor: Colors.lightGreen.shade900,
+        backgroundColor: Colors.blue.shade800,
         elevation: 0,
         leading: IconButton(
           onPressed: () {

@@ -17,14 +17,14 @@ class Editar_function extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.brown.shade900,
+      backgroundColor: Colors.lightGreen.shade800,
       appBar: AppBar(
-        backgroundColor: Colors.brown.shade900,
+        backgroundColor: Colors.lightGreen.shade800,
         elevation: 0,
         leading: IconButton(
           onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Skanner()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const Skanner()));
           },
           icon: const Icon(
             Icons.arrow_back_ios,
