@@ -13,7 +13,7 @@ class DashboardPage extends StatelessWidget {
     const elevation = 8.0;
     final borderRadius = BorderRadius.circular(8.0);
     const clipBehavior = Clip.antiAliasWithSaveLayer;
-    final splashColor = Colors.black26;
+    const splashColor = Colors.black26;
     const size = MainAxisSize.min;
     const style = TextStyle(fontSize: 22.0, color: Colors.white);
     const double h = 200;
@@ -54,8 +54,8 @@ class DashboardPage extends StatelessWidget {
                   mainAxisSize: size,
                   children: [
                     Ink.image(
-                      image: const NetworkImage(
-                        "https://cdn.pixabay.com/photo/2018/12/10/10/21/earth-3866609_960_720.jpg",
+                      image: const AssetImage(
+                        "lib/assets/translate_db.png",
                       ),
                       height: h,
                       width: w,
@@ -83,8 +83,8 @@ class DashboardPage extends StatelessWidget {
                   mainAxisSize: size,
                   children: [
                     Ink.image(
-                      image: const NetworkImage(
-                        "https://cdn.pixabay.com/photo/2017/09/28/21/56/print-2797178_960_720.jpg",
+                      image: const AssetImage(
+                        "lib/assets/escann_db.png",
                       ),
                       height: h,
                       width: w,
@@ -112,8 +112,8 @@ class DashboardPage extends StatelessWidget {
                   mainAxisSize: size,
                   children: [
                     Ink.image(
-                      image: const NetworkImage(
-                        "https://cdn.pixabay.com/photo/2016/10/07/12/35/puzzle-1721464_960_720.jpg",
+                      image: const AssetImage(
+                        "lib/assets/union_bd.png",
                       ),
                       height: h,
                       width: w,
@@ -140,8 +140,8 @@ class DashboardPage extends StatelessWidget {
                 child: Column(
                   children: [
                     Ink.image(
-                      image: const NetworkImage(
-                        "https://cdn.pixabay.com/photo/2018/11/15/09/15/documents-3816835_960_720.jpg",
+                      image: const AssetImage(
+                        "lib/assets/convert_db.jpg",
                       ),
                       height: h,
                       width: w,
@@ -168,8 +168,8 @@ class DashboardPage extends StatelessWidget {
                 child: Column(
                   children: [
                     Ink.image(
-                      image: const NetworkImage(
-                        "https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537_960_720.jpg",
+                      image: const AssetImage(
+                        "lib/assets/edit_db.png",
                       ),
                       height: h,
                       width: w,

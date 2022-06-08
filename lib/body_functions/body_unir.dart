@@ -77,8 +77,8 @@ class Pantalla_inferior_union extends StatelessWidget {
                 margin: const EdgeInsets.all(10),
                 height: MediaQuery.of(context).size.height * 0.25,
                 width: MediaQuery.of(context).size.width * 0.50,
-                child: Image.network(
-                  "https://cdn.pixabay.com/photo/2014/04/03/10/41/optical-illusion-311130_960_720.png",
+                child: Image.asset(
+                  "lib/assets/union_body.png",
                   fit: BoxFit.fill,
                 ),
               ),

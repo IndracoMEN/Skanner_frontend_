@@ -66,6 +66,16 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
   - lib/assets/sk_drawer.jpg
+  - lib/assets/convert_body.png
+  - lib/assets/convert_db.jpg
+  - lib/assets/edit_body.png
+  - lib/assets/edit_db.png
+  - lib/assets/escann_body.png
+  - lib/assets/escann_db.png
+  - lib/assets/translate_body.png
+  - lib/assets/translate_db.png
+  - lib/assets/union_bd.png
+  - lib/assets/union_body.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

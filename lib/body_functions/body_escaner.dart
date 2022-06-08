@@ -1,7 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
+// ignore: camel_case_types
 class Body_escaner extends StatelessWidget {
   const Body_escaner({Key? key}) : super(key: key);
 
@@ -27,7 +27,7 @@ class Body_escaner extends StatelessWidget {
                     ),
                   ),
                 ),
-                Pantalla_inferior_escaner(),
+                const Pantalla_inferior_escaner(),
               ],
             ),
           ),
@@ -37,6 +37,7 @@ class Body_escaner extends StatelessWidget {
   }
 }
 
+// ignore: camel_case_types
 class Pantalla_inferior_escaner extends StatelessWidget {
   const Pantalla_inferior_escaner({
     Key? key,
@@ -74,8 +75,8 @@ class Pantalla_inferior_escaner extends StatelessWidget {
                 margin: const EdgeInsets.all(10),
                 height: MediaQuery.of(context).size.height * 0.25,
                 width: MediaQuery.of(context).size.width * 0.50,
-                child: Image.network(
-                  "https://cdn.pixabay.com/photo/2012/04/02/16/55/adobe-24943_960_720.png",
+                child: Image.asset(
+                  "lib/assets/escann_body.png",
                   fit: BoxFit.fill,
                 ),
               ),

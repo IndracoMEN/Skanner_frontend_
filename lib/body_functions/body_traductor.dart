@@ -1,7 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
+// ignore: camel_case_types
 class Body_traductor extends StatelessWidget {
   const Body_traductor({Key? key}) : super(key: key);
 
@@ -36,6 +36,7 @@ class Body_traductor extends StatelessWidget {
   }
 }
 
+// ignore: camel_case_types
 class Pantalla_inferior_traductor extends StatelessWidget {
   const Pantalla_inferior_traductor({
     Key? key,
@@ -74,8 +75,8 @@ class Pantalla_inferior_traductor extends StatelessWidget {
                   margin: const EdgeInsets.all(10),
                   height: MediaQuery.of(context).size.height * 0.25,
                   width: MediaQuery.of(context).size.width * 0.50,
-                  child: Image.network(
-                    "https://cdn.pixabay.com/photo/2016/10/18/20/18/international-1751293_960_720.png",
+                  child: Image.asset(
+                    "lib/assets/translate_body.png",
                     fit: BoxFit.fill,
                   ),
                 ),

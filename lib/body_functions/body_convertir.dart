@@ -36,6 +36,7 @@ class Body_convertir extends StatelessWidget {
   }
 }
 
+// ignore: camel_case_types
 class Pantalla_inferior_convertir extends StatelessWidget {
   const Pantalla_inferior_convertir({
     Key? key,
@@ -74,8 +75,8 @@ class Pantalla_inferior_convertir extends StatelessWidget {
                   margin: const EdgeInsets.all(10),
                   height: MediaQuery.of(context).size.height * 0.25,
                   width: MediaQuery.of(context).size.width * 0.50,
-                  child: Image.network(
-                    "https://cdn.pixabay.com/photo/2014/04/02/16/17/arrow-306811_960_720.png",
+                  child: Image.asset(
+                    "lib/assets/convert_body.png",
                     fit: BoxFit.fill,
                   ),
                 ),

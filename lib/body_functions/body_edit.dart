@@ -74,8 +74,8 @@ class Pantalla_inferior_traductor extends StatelessWidget {
                 margin: const EdgeInsets.all(10),
                 height: MediaQuery.of(context).size.height * 0.25,
                 width: MediaQuery.of(context).size.width * 0.50,
-                child: Image.network(
-                  "https://cdn.pixabay.com/photo/2017/10/14/17/57/computer-2851285_960_720.png",
+                child: Image.asset(
+                  "lib/assets/edit_body.png",
                   fit: BoxFit.fill,
                 ),
               ),
