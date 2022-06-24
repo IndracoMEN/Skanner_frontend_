@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:skanner_frontend/ui_functions/translate_body.dart';
 
 // ignore: camel_case_types
 class Body_traductor extends StatelessWidget {
@@ -103,7 +104,10 @@ class Pantalla_inferior_traductor extends StatelessWidget {
                   style: TextStyle(fontSize: 15)),
             ),
             ElevatedButton(
-              onPressed: () => showToast("Traduciendo PDF..."),
+              onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const TranslateBodyUi())),
               child: Text("Traducir PDF".toUpperCase()),
               style: ElevatedButton.styleFrom(
                 onPrimary: Colors.white,

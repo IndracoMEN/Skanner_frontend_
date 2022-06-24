@@ -21,7 +21,7 @@ class _CompartirPageState extends State<CompartirPage> {
     //dimensiones, orientación, etc.
     return Column(
       children: [
-        Container(
+        SizedBox(
           width: double.infinity,
           height: size.height * 0.50,
           child: Swiper(
@@ -37,11 +37,11 @@ class _CompartirPageState extends State<CompartirPage> {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: const FadeInImage(
-                    placeholder: NetworkImage(
-                      "https://c.tenor.com/YAs3DgW0dbMAAAAC/loading-loader.gif",
+                    placeholder: AssetImage(
+                      "lib/assets/loading.gif",
                     ),
-                    image: NetworkImage(
-                      "https://cdn.pixabay.com/photo/2017/03/08/21/20/pdf-2127829_960_720.png",
+                    image: AssetImage(
+                      "lib/assets/pdf.png",
                     ),
                     fit: BoxFit.cover,
                   ),
